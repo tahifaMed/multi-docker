@@ -12,7 +12,8 @@
             "name": "server",
             "image": "tahifamed/multi-server",
             "hostname": "api",
-            "essential": false
+            "essential": false,
+            "memory": 128
         },
         {
             "name": "nginx",
@@ -24,7 +25,10 @@
                     "containerPort": 80
                 }
             ],
-            "links": ["client", "server"],
+            "links": [
+                "client",
+                "server"
+            ],
             "memory": 128
         },
         {
